@@ -21,7 +21,7 @@ u(x,0)=\tanh x,\quad u(0,t)=\tanh(2t),\quad u(1,t)=\tanh(1+2t),
 $$
 
 $$
-u_x(1,t)=\operatorname{sech}^2(1+2t).
+u_x(1,t)=\frac{1}{\cosh^2(1+2t)}.
 $$
 
 The inverse model does **not** use the true values of $q$ and $r$ as training targets. It starts from $q=-2$ and $r=0.5$ and learns them with the network. It *does* use the exact prescribed initial/boundary data, as explicitly stated above.
