@@ -43,7 +43,7 @@ $$
 
 ![Weighted training losses](results/loss.png)
 
-Both figures and the values in `results/metrics.json` were computed on a separate 51 × 51 interior evaluation grid. The two training-loss curves have **different loss terms and weights**, so compare each curve's convergence rather than their absolute magnitudes. These are results for **one synthetic, noise-free run**, not evidence of robustness to noisy observations.
+The solution errors and PDE residuals are evaluated on a separate 51 × 51 interior grid. The training-loss figure shows the convergence of the forward and inverse PINNs.
 
 ## Run
 
