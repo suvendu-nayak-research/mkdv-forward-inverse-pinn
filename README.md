@@ -43,7 +43,7 @@ $$
 
 ![Weighted training losses](results/loss.png)
 
-The solution errors and PDE residuals are evaluated on a separate 51 × 51 interior grid. The training-loss figure shows the convergence of the forward and inverse PINNs.
+The solution errors and PDE residuals are evaluated on a separate 51 × 51 interior grid. The training-loss figure shows the recorded weighted training losses of the forward and inverse PINNs.
 
 ## Run
 
@@ -74,7 +74,7 @@ This extra command is unnecessary on Apple Silicon. Your installed PyTorch wheel
 | `train_inverse.py` | Jointly trains $u_\theta(x,t)$ and the scalars $q$, $r$. |
 | `evaluate.py` | Computes errors and regenerates the two figures. |
 
-Outputs are saved under `results/`. Predictions are saved as NumPy arrays; model weights are not saved. `train_inverse.py` does not require running `train_forward.py` first, but both runs are required to regenerate the comparison figures.
+Outputs are saved under `results/`. Predictions are saved as NumPy arrays; model weights are not saved. The forward and inverse models can be trained independently. With NumPy and Matplotlib installed, run `python evaluate.py` to regenerate the metrics and both figures from the included results.
 
 ## Numerical setup
 
