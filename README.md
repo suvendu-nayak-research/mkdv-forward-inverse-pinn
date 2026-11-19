@@ -47,7 +47,8 @@ The solution errors and PDE residuals are evaluated on a separate 51 × 51 inter
 
 ## Run
 
-Use **Python 3.11 or 3.12**, preferably inside a virtual environment:
+
+Python 3.11 or 3.12 is recommended, preferably in a virtual environment.
 
 ```bash
 python -m pip install -r requirements.txt
@@ -57,13 +58,7 @@ python train_inverse.py
 python evaluate.py
 ```
 
-The scripts request CPU execution. On a Linux/Windows CPU-only machine, you can install the smaller CPU PyTorch wheel first:
-
-```bash
-python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
-```
-
-This extra command is unnecessary on Apple Silicon. Your installed PyTorch wheel must be compatible with your Python version and platform.
+The scripts are configured for CPU execution. The forward and inverse models can be trained independently. To regenerate the reported metrics and figures from the included results, only `python evaluate.py` is required, with NumPy and Matplotlib installed.
 
 ## Files
 
